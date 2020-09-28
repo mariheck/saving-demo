@@ -1,0 +1,43 @@
+.contact {
+    h2 {
+        margin: 58px 0 30px;
+    }
+
+    form {
+        display: flex;
+
+        .form-column {
+            width: 50%;
+
+            &:first-of-type {
+                padding-right: 20px;
+            }
+
+            &:last-of-type {
+                padding-left: 20px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contact form {
+        flex-wrap: wrap;
+
+        .form-column {
+            width: 100%;
+
+            &:first-of-type {
+                padding-right: 0;
+            }
+
+            &:last-of-type {
+                padding-left: 0;
+            }
+        }
+    }
+}

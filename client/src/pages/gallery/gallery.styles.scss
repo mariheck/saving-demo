@@ -1,0 +1,29 @@
+.gallery {
+    .files-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: -0.4%;
+        padding: 0;
+
+        &:after {
+            content: '';
+            flex-grow: 10;
+        }
+    }
+
+    .no-file-message {
+        width: 100%;
+        text-align: center;
+        padding-top: 200px;
+        color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .gallery {
+        .main-file-container {
+            display: none;
+        }
+    }
+}

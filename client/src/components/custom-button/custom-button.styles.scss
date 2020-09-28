@@ -1,0 +1,26 @@
+button {
+    width: 150px;
+    display: block;
+    border-radius: 0;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: inherit;
+    font-size: 14px;
+    padding: 14px;
+    border: solid 1px rgba(255, 255, 255, 0.9);
+    transition: 300ms ease all;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #a92b23;
+        border-color: #a92b23;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &.red {
+        border: solid 1px rgba(169, 43, 35, 0.9);
+    }
+}

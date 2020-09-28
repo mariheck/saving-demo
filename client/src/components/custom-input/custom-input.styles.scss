@@ -1,0 +1,68 @@
+@mixin shrinkLabel {
+    top: -15px;
+    left: -1px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0 3px;
+}
+
+.custom-input {
+    position: relative;
+    margin: 35px 0;
+
+    &.checkbox {
+        margin: 0 0 10px 30px;
+
+        input {
+            margin: 0 10px 0 0;
+        }
+    }
+
+    &:not(.checkbox) {
+        input,
+        textarea {
+            background-color: transparent;
+            color: rgba(255, 255, 255, 0.9);
+            font-family: inherit;
+            font-size: 14px;
+            padding: 15px;
+            display: block;
+            width: 100%;
+            border-radius: 0;
+            border: solid 1px rgba(255, 255, 255, 0.9);
+            margin: 25px 0;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:focus ~ label {
+                @include shrinkLabel();
+            }
+        }
+
+        textarea {
+            height: 131px;
+        }
+
+        label {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            position: absolute;
+            pointer-events: none;
+            left: 15px;
+            top: 15px;
+            transition: 300ms ease all;
+
+            &.shrink {
+                @include shrinkLabel();
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .custom-input:not(.checkbox):last-of-type {
+        margin: 0;
+    }
+}

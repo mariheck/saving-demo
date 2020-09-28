@@ -1,0 +1,114 @@
+.fullscreen-display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 100vw !important;
+    height: 100vh !important;
+    padding-right: 0 !important;
+    background-color: #020303;
+
+    .copyright {
+        width: 100%;
+        height: 5%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .file-container {
+        height: 90%;
+        display: flex;
+        align-items: center;
+
+        img {
+            display: block;
+            height: auto;
+            max-height: 100%;
+            width: auto;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .video {
+            margin: auto;
+
+            div {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .file-navigation {
+        width: 100%;
+        height: 5%;
+        background-color: inherit;
+        display: flex;
+        align-items: center;
+        padding-bottom: 1vh;
+
+        .navigation-arrows {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+            i.icon:first-of-type {
+                margin-right: 50px;
+            }
+        }
+
+        .navigation-close {
+            margin-left: auto;
+            margin-right: 1vw;
+        }
+
+        i.icon {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.2s linear;
+            cursor: pointer;
+
+            &:hover {
+                color: #a92b23;
+            }
+        }
+    }
+}
+
+@media screen and (max-device-width: 600px) and (orientation: portrait) {
+    .fullscreen-display {
+        .copyright {
+            height: 10%;
+        }
+
+        .file-container {
+            height: 70%;
+        }
+
+        .file-navigation {
+            height: 10%;
+        }
+    }
+}
+
+@media screen and (max-device-width: 900px) and (orientation: landscape) {
+    .fullscreen-display {
+        .copyright {
+            height: 10%;
+        }
+
+        .file-container {
+            height: 80%;
+        }
+
+        .file-navigation {
+            height: 10%;
+        }
+    }
+}

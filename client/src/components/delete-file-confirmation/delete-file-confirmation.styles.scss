@@ -1,0 +1,65 @@
+.delete-file-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 100vw !important;
+    height: 100vh !important;
+    padding-right: 0 !important;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.delete-file-confirmation {
+    position: absolute;
+    z-index: 110;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: 100vw;
+    padding: 50px;
+    background-color: #020303;
+    border-radius: 3px;
+
+    h3 {
+        margin-bottom: 30px;
+    }
+
+    .photo-display {
+        display: block;
+        height: auto;
+        max-height: 500px;
+        width: auto;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .video-display {
+        width: 500px;
+        max-width: 100%;
+    }
+
+    .buttons-wrapper {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            margin-right: 20px;
+            margin-top: 30px;
+            border-radius: 0;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .delete-file-confirmation {
+        padding: 30px;
+    }
+}

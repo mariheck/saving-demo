@@ -1,0 +1,34 @@
+.edit-buttons-thumbnail {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-out;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    i.icon {
+        transition: all 0.2s ease-out;
+        cursor: pointer;
+        display: none;
+
+        &:hover {
+            color: #a92b23;
+        }
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+
+        i.icon {
+            display: block;
+        }
+    }
+}

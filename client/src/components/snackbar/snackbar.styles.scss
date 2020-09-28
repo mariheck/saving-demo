@@ -1,0 +1,41 @@
+.snackbar {
+    position: absolute;
+    z-index: 500;
+    bottom: -50px;
+    left: 50vw;
+    transform: translateX(-50%);
+    padding: 10px 35px 10px 30px;
+    width: auto;
+    height: 40px;
+    line-height: 20px;
+    font-size: 14px;
+    background-color: #848484;
+    color: #fff;
+    border-radius: 5px;
+    animation: 3.5s fadein forwards;
+
+    @keyframes fadein {
+        10% {
+            bottom: 10px;
+        }
+        90% {
+            bottom: 10px;
+        }
+        100% {
+            bottom: -50px;
+        }
+    }
+
+    i.icon {
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    &.error {
+        background-color: #a92b23;
+    }
+
+    &.success {
+        background-color: #59af50;
+    }
+}

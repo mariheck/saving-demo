@@ -1,0 +1,120 @@
+.create-and-edit {
+    display: flex;
+    justify-content: space-between;
+
+    .preview {
+        width: 48%;
+
+        &.photos-preview {
+            img {
+                display: block;
+                max-height: 80vh;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        &.videos-preview {
+            height: 300px;
+        }
+
+        &.icon-preview {
+            height: 600px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    form {
+        width: 48%;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        padding-left: 30px;
+
+        label.file-upload-form {
+            cursor: pointer;
+            font-size: 12px;
+            position: relative;
+            top: -25px;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 300;
+            text-decoration: underline;
+            font-style: italic;
+            transition: all ease 300ms;
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        input.file-upload-form {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .file-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            .collections-list {
+                width: 40%;
+
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .small-preview {
+                width: 60%;
+                margin-left: auto;
+                filter: grayscale(65%);
+
+                img {
+                    display: block;
+                    max-height: 250px;
+                    max-width: 100%;
+                    margin-left: auto;
+                }
+            }
+        }
+        .buttons-wrapper {
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                margin-right: 20px;
+                margin-top: 100px;
+                border-radius: 0;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .create-and-edit {
+        flex-direction: column;
+
+        .preview,
+        form {
+            width: 100%;
+        }
+
+        form {
+            border-left: none;
+            padding: 50px 0;
+            order: -1;
+        }
+
+        .preview {
+            padding-bottom: 50px;
+        }
+    }
+}
