@@ -6,9 +6,7 @@ const LegalPage = () => (
     <div className="legal">
         <h2>Mentions Légales</h2>
         <h3>Présentation du site</h3>
-        <h4>Propriétaire</h4>
-        <p>Anthony P. - Toulouse, France</p>
-        <h4>Créateur</h4>
+        <h4>Propriétaire et Créateur</h4>
         <p>
             Marine Heckler, Développeur Web{' '}
             <a
@@ -28,9 +26,17 @@ const LegalPage = () => (
 
         <h3>Propriété intellectuelle</h3>
         <p>
-            Ce site a été conçu dans le but de présenter les travaux d'Anthony
-            P. Tout contenu (photographies, vidéos, textes) est soumis aux
-            droits d'auteur.
+            Ce site a été conçu dans le but de donner un apperçu de la page
+            administrateur du site{' '}
+            <a
+                href="https://saving-portfolio.herokuapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                https://saving-portfolio.herokuapp.com/
+            </a>
+            . Tout contenu (photographies, vidéos, textes) est soumis aux droits
+            d'auteur et sont la propriété de leur créateur, Saving - Anthony P.
         </p>
     </div>
 );
